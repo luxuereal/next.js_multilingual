@@ -1,0 +1,105 @@
+{
+    "header": {
+      "Sign In": "Iniciar sesión",
+      "Sign Up": "Inscribirse",
+      "Home": "Hogar",
+      "About": "Acerca de",
+      "Blog": "Blog",
+      "Support": "Apoyo",
+      "Languages": "Idiomas",
+      "English": "Inglés",
+      "Spanish": "Español",
+      "Portuguese": "Portugués"
+    },
+    "hero": {
+      "title": "Soluciones digitales LOW COST para tu negocio",
+      "Begin": "Comenzar",
+      "Contact": "Contáctenos"
+    },
+    "video": {
+      "title": "Estamos listos para ayudar"
+    },
+    "section": {
+      "title": "Ofrecemos el mejor servicio. Siempre.",
+      "content": "Los mejores servicios gráficos y web profesionales de bajo costo y alta calidad para usted y su empresa. Manejamos una entrega rápida y un excelente servicio al cliente las 24 horas, los 7 días de la semana para estar siempre en contacto. Tenemos las mejores ofertas para nuevas empresas, negocios y corporaciones que necesitan servicios profesionales y rápidos con los mejores precios de todo el mercado.",
+      "item1": "+ 8000 Proyectos terminados",
+      "item2": "+ 3000 clientes" 
+    },
+    "pricing": {
+      "title": "Construye tu nueva marca al mejor precio",
+      "monthly": "Mensual",
+      "yearly": "Anual",
+      "Lite": "Lite",
+      "Basic": "Básico",
+      "Plus": "Plus",
+      "mo":"mes",
+      "yr":"año",
+      "ECONOMY":"MEMBRESÍA ECONÓMICA",
+      "ENTREPRENEUR" : "MEMBRESÍA EMPRENDEDOR",
+      "CORPORATE": "MEMBRESÍA CORPORATIVA",
+      "buy now": "Compra ahora",
+      "LiteServices": {
+        "1": "Registro de 1 dominio .com",
+        "2":"Hosting economía en Estados Unidos",
+        "3":"Cuentas de correo ilimitadas",
+        "4":"Atención al cliente por correo electrónico",
+        "5":"Publicidad en 1 historia de Instagram por semana"
+      },
+      "BasicServices": {
+        "1":"Plataformas de pago listas para usar (PayPal, Stripe y más)",
+        "2":"Textos legales para comercio electrónico (Pri política de vacantes, cookies, términos y condiciones, reembolsos, devoluciones)",
+        "3":"Registro de 1 dominio .com",
+        "4":"Alojamiento premium en Estados Unidos",
+        "5":"Cuentas de correo premium ilimitadas",
+        "6":"Certificado SSL",
+        "7":"Gestión integral de servicios",
+        "8":"Atención al cliente 24/7/365 (vía email y telegram)",
+        "9":"Publicidad en 3 historias de Instagram por semana"
+      },
+      "PlusServices": {
+        "1":"Plataformas de pago listas para usar (PayPal, Stripe y más)",
+        "2":"Textos legales para comercio electrónico (Política de privacidad, cookies, términos y condiciones, reembolsos, devoluciones)",
+        "3":"Registro de 1 dominio de su elección (.com .net .store .xyz .io)",
+        "4":"Hosting corporativo en Estados Unidos",
+        "5":"Cuentas de correo electrónico corporativas ilimitadas",
+        "6":"Certificado SSL",
+        "7":"Gestión integral de servicios",
+        "8":"Atención al cliente 24/7/365 (vía email y telegram)",
+        "9":"Publicidad en 5 historias de Instagram por semana"
+      }
+    },
+    "blog": {
+      "title":"Nuestros últimos blogs"
+    },
+    "contact": {
+        "title":"¿Necesitas ayuda? Abra un ticket",
+        "paragraph":"Nuestro equipo de soporte se comunicará con usted lo antes posible por correo electrónico.",
+        "submit":"Enviar boleto",
+        "caption": {
+          "1":"Su nombre",
+          "2":"Su correo electrónico",
+          "3":"Su mensaje"
+        },
+        "placeholder": {
+          "1":"Ingrese su nombre",
+          "2":"Ingrese su correo electrónico",
+          "3":"Ingrese su mensaje"
+        }
+    },
+    "testimonial": {
+      "title":"Lo que dicen nuestros usuarios"
+    },
+    "footer": {
+      "useful":"Enlaces útiles",
+      "terms": "Términos",
+      "help": "Soporte y ayuda",
+      "blog":"Blog",
+      "pricing":"Precios",
+      "about":"Acerca de",
+      "tos":"TOS",
+      "privacy":"Política de privacidad",
+      "refund": "Política de reembolso",
+      "support":"Ticket de soporte abierto",
+      "tou": "Términos de uso"
+    }
+  }
