@@ -26,15 +26,15 @@ export async function generateStaticParams() {
   return ['en', 'de'].map((locale) => ({locale}));
 }
 
-export async function generateMetadata({params: {locale}}: Props) {
-  const messages = await getMessages(locale);
+// export async function generateMetadata({params: {locale}}: Props) {
+//   const messages = await getMessages(locale);
 
-  const t = createTranslator({locale, messages});
+//   const t = createTranslator({locale, messages});
 
-  return {
-    title: 'Hello'
-  };
-}
+//   return {
+//     title: 'Hello'
+//   };
+// }
 
 export default async function LocaleLayout({
   children,
