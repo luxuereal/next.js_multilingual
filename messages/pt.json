@@ -1,0 +1,105 @@
+{
+    "header": {
+      "Sign In": "Entrar",
+      "Sign Up": "Inscrever-se",
+      "Home": "Lar",
+      "About": "Sobre",
+      "Blog": "blog",
+      "Support": "Apoiar",
+      "Languages": "línguas",
+      "English": "Inglês",
+      "Spanish": "espanhol",
+      "Portuguese": "português"
+    },
+    "hero": {
+      "title": "Soluções digitais LOW COST para o seu negócio",
+      "Begin": "Começar",
+      "Contact": "Contate-nos"
+    },
+    "video": {
+      "title": "Nós estamos prontos para ajudar"
+    },
+    "section": {
+      "title": "Oferecemos o melhor serviço. Sempre.",
+      "content": "Os melhores serviços gráficos e web profissionais de baixo custo e alta qualidade para você e sua empresa. Lidamos com entrega rápida e excelente atendimento ao cliente 24 horas por dia, 7 dias por semana, para sempre manter contato. Temos as melhores ofertas para novas empresas, negócios e corporações que precisam de serviços profissionais e rápidos com os melhores preços de todo o mercado.",
+      "item1": "+ 8000 Projetos finalizados",
+      "item2": "+ 3000 clientes" 
+    },
+    "pricing": {
+      "title": "Crie sua nova marca com o melhor preço",
+      "monthly": "Mensal",
+      "yearly": "anual",
+      "Lite": "Lite",
+      "Basic": "Básico",
+      "Plus": "Plus",
+      "mo":"mês",
+      "yr":"ano",
+      "ECONOMY":"ECONOMY ASSOCIAÇÃO",
+      "ENTREPRENEUR" : "EMPREENDEDOR MEMBERSHIP",
+      "CORPORATE": "CORPORATE MEMBERSHIP",
+      "buy now": "Compre agora",
+      "LiteServices": {
+        "1": "Registro de 1 domínio .com",
+        "2":"Hospedagem econômica nos Estados Unidos",
+        "3":"Contas de e-mail ilimitadas",
+        "4":"Atendimento ao cliente por e-mail",
+        "5":"Anuncie em 1 story do Instagram por semana"
+      },
+      "BasicServices": {
+        "1":"Plataformas de pagamento prontas para uso (PayPal, Stripe e mais)",
+        "2":"Textos legais para e-commerce (Priva cy, cookies, termos e condições, reembolsos, devoluções)",
+        "3":"Cadastro de 1 domínio .com",
+        "4":"Hospedagem premium nos Estados Unidos",
+        "5":"Contas de e-mail premium ilimitadas",
+        "6":"Certificado SSL",
+        "7":"Gerenciamento completo de serviços",
+        "8":"Atendimento ao cliente 24/7/365 (via e-mail e telegrama)",
+        "9":"Anuncie em 3 histórias do Instagram por semana"
+      },
+      "PlusServices": {
+        "1":"Plataformas de pagamento prontas para uso (PayPal, Stripe e mais)",
+        "2":"Textos legais para e-commerce (Política de privacidade, cookies, termos e condições, reembolsos, devoluções)",
+        "3":"Registro de 1 domínio de sua escolha (.com .net .store .xyz .io)",
+        "4":"Hospedagem corporativa nos Estados Unidos",
+        "5":"Contas de e-mail corporativo ilimitadas",
+        "6":"Certificado SSL",
+        "7":"Gerenciamento abrangente de serviços",
+        "8":"Atendimento ao cliente 24/7/365 (via e-mail e telegrama)",
+        "9":"Anuncie em 5 histórias do Instagram por semana"
+      }
+    },
+    "blog": {
+      "title":"Nossos últimos blogs"
+    },
+    "contact": {
+        "title":"Preciso de ajuda? Abra um ticket",
+        "paragraph":"Nossa equipe de suporte entrará em contato com você o mais rápido possível por e-mail.",
+        "submit":"Enviar ticket",
+        "caption": {
+          "1":"Seu nome",
+          "2":"Seu e-mail",
+          "3":"Sua mensagem"
+        },
+        "placeholder": {
+          "1":"Digite seu nome",
+          "2":"Digite seu e-mail",
+          "3":"Digite sua mensagem"
+        }
+    },
+    "testimonial": {
+      "title":"O que nossos usuários dizem"
+    },
+    "footer": {
+      "useful":"Links Úteis",
+      "terms": "Termos",
+      "help": "Suporte e Ajuda",
+      "blog":"Blog",
+      "pricing":"Preços",
+      "about":"Sobre",
+      "tos":"TOS",
+      "privacy":"Política de Privacidade",
+      "refund": "Política de Reembolso",
+      "support":"Abrir Ticket de Suporte",
+      "tou": "Termos de Uso"
+    }
+  }

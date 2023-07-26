@@ -1,5 +1,105 @@
 {
-  "Index": {
-    "title": "English"
+  "header": {
+    "Sign In": "Sign In",
+    "Sign Up": "Sign Up",
+    "Home": "Home",
+    "About": "About",
+    "Blog": "Blog",
+    "Support": "Support",
+    "Languages": "Languages",
+    "English": "English",
+    "Spanish": "Spanish",
+    "Portuguese": "Portuguese"
+  },
+  "hero": {
+    "title": "Digital solutions LOW COST for your business",
+    "Begin": "Begin",
+    "Contact": "Contact US"
+  },
+  "video": {
+    "title": "We are ready to help"
+  },
+  "section": {
+    "title": "We offer the best service. Always.",
+    "content": "The best low-cost, high-quality professional web and graphic services for you and your business. We handle fast delivery and excellent customer service 24/7 to always stay in touch. We have the best offers for new companies, businesses and corporations that need professional and fast services with the best prices in the entire market.",
+    "item1": "+ 8000 Finished projects",
+    "item2": "+ 3000 customers" 
+  },
+  "pricing": {
+    "title": "Build your new brand at the best price",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "Lite": "Lite",
+    "Basic": "Basic",
+    "Plus": "Plus",
+    "mo":"mo",
+    "yr":"yr",
+    "ECONOMY":"ECONOMY MEMBERSHIP",
+    "ENTREPRENEUR" : "ENTREPRENEUR MEMBERSHIP",
+    "CORPORATE": "CORPORATE MEMBERSHIP",
+    "buy now": "Buy now",
+    "LiteServices": {
+      "1": "Registration of 1 .com domain",
+      "2":"Hosting economy in the United States",
+      "3":"Unlimited email accounts",
+      "4":"Customer service via email",
+      "5":"Advertise on 1 Instagram story per week"
+    },
+    "BasicServices": {
+      "1":"Ready-to-use payment platforms (PayPal, Stripe, and more)",
+      "2":"Legal texts for e-commerce (Privacy policy, cookies, terms and conditions, refunds, returns)",
+      "3":"Registration of 1 .com domain",
+      "4":"Premium hosting in the United States",
+      "5":"Unlimited premium email accounts",
+      "6":"SSL certificate",
+      "7":"Comprehensive service management",
+      "8":"Customer service 24/7/365 (via email and telegram)",
+      "9":"Advertise on 3 Instagram stories per week"
+    }
+    ,"PlusServices": {
+      "1":"Ready-to-use payment platforms (PayPal, Stripe, and more)",
+      "2":"Legal texts for e-commerce (Privacy policy, cookies, terms and conditions, refunds, returns)",
+      "3":"Registration of 1 domain of your choice (.com .net .store .xyz .io)",
+      "4":"Corporate hosting in the United States",
+      "5":"Unlimited corporate email accounts",
+      "6":"SSL certificate",
+      "7":"Comprehensive service management",
+      "8":"Customer service 24/7/365 (via email and telegram)",
+      "9":"Advertise on 3 Instagram stories per week"
+    }
+  },
+  "blog": {
+    "title":"Our Latest Blogs"
+  },
+  "contact": {
+    "title":"Need Help? Open a Ticket",
+    "paragraph":"Our support team will get back to you ASAP via email.",
+    "submit":"Submit Ticket",
+    "caption": {
+      "1":"Your Name",
+      "2":"Your Email",
+      "3":"Your Message"
+    },
+    "placeholder": {
+      "1":"Enter your name",
+      "2":"Enter your email",
+      "3":"Enter your Message"
+    }
+  },
+  "testimonial": {
+    "title":"What Our Users Says"
+  },
+  "footer": {
+    "useful":"Useful Links",
+    "terms": "Terms",
+    "help": "Support & Help",
+    "blog":"Blog",
+    "pricing":"Pricing",
+    "about":"About",
+    "tos":"TOS",
+    "privacy":"Privacy Policy",
+    "refund": "Refund Policy",
+    "support":"Open Support Ticket",
+    "tou": "Terms of Use"
   }
 }

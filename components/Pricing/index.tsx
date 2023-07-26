@@ -3,16 +3,18 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import {useTranslations} from 'next-intl';
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
+  const msg = useTranslations('pricing');
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title={msg('title')}
+          paragraph={""}
           center
           width="665px"
         />
@@ -30,7 +32,7 @@ const Pricing = () => {
                   : "text-dark dark:text-white"
               } mr-4 cursor-pointer text-base font-semibold`}
             >
-              Monthly
+              {msg('monthly')}
             </span>
             <div
               onClick={() => setIsMonthly(!isMonthly)}
@@ -55,50 +57,56 @@ const Pricing = () => {
                   : "pointer-events-none text-primary"
               } ml-4 cursor-pointer text-base font-semibold`}
             >
-              Yearly
+              {msg('yearly')}
             </span>
           </div>
         </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName={msg('Lite')}
+            price={isMonthly ? "15" : "150"}
+            duration={isMonthly ? msg('mo') : msg('yr')}
+            subtitle={msg('ECONOMY')}
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text={msg('LiteServices.1')} status="active" />
+            <OfferList text={msg('LiteServices.2')} status="active" />
+            <OfferList text={msg('LiteServices.3')} status="active" />
+            <OfferList text={msg('LiteServices.4')} status="active" />
+            <OfferList text={msg('LiteServices.5')} status="active" />
+
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName={msg('Basic')}
+            price={isMonthly ? "20" : "200"}
+            duration={isMonthly ? msg('mo') : msg('yr')}
+            subtitle={msg('ENTREPRENEUR')}
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text={msg('BasicServices.1')}status="active" />
+            <OfferList text={msg('BasicServices.2')}status="active" />
+            <OfferList text={msg('BasicServices.3')}status="active" />
+            <OfferList text={msg('BasicServices.4')}status="active" />
+            <OfferList text={msg('BasicServices.5')}status="active" />
+            <OfferList text={msg('BasicServices.6')}status="active" />
+            <OfferList text={msg('BasicServices.7')}status="active" />
+            <OfferList text={msg('BasicServices.8')}status="active" />
+            <OfferList text={msg('BasicServices.9')}status="active" />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName={msg('Plus')}
+            price={isMonthly ? "25" : "250"}
+            duration={isMonthly ? msg('mo') : msg('yr')}
+            subtitle={msg('CORPORATE')}
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text={msg('PlusServices.1')} status="active" />
+            <OfferList text={msg('PlusServices.2')} status="active" />
+            <OfferList text={msg('PlusServices.3')} status="active" />
+            <OfferList text={msg('PlusServices.4')} status="active" />
+            <OfferList text={msg('PlusServices.5')} status="active" />
+            <OfferList text={msg('PlusServices.6')} status="active" />
+            <OfferList text={msg('PlusServices.7')} status="active" />
+            <OfferList text={msg('PlusServices.8')} status="active" />
+            <OfferList text={msg('PlusServices.9')} status="active" />
           </PricingBox>
         </div>
       </div>
