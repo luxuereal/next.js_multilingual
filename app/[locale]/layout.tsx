@@ -46,7 +46,7 @@ export default async function LocaleLayout({
   const messages = await getMessages(locale);
 
   return (
-    <html lang={locale}>
+    <html suppressHydrationWarning lang={locale}>
       <body className={clsx('flex h-full flex-col dark:bg-black')}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark"> 

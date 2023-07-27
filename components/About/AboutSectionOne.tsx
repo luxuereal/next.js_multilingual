@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import {useTranslations} from 'next-intl';
