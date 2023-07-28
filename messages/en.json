@@ -101,5 +101,43 @@
     "refund": "Refund Policy",
     "support":"Open Support Ticket",
     "tou": "Terms of Use"
+  },
+  "signUp": {
+    "title": "Create your account",
+    "paragraph": "It’s totally free and super easy",
+    "label": {
+      "1":"Full Name",
+      "2":"Work Email",
+      "3":"Your Password"
+    },
+    "placeholder": {
+      "1":"Enter your full name",
+      "2":"Enter your Email",
+      "3":"Enter your Password"
+    },
+    "agree": {
+      "1":"By creating account means you agree to the ",
+      "2":"Terms and Conditions ",
+      "3":", and our ",
+      "4":"Privacy Policy"
+    },
+    "signUp": "Sign up",
+    "p":"Already using ADM Graphics?",
+    "signIn":"Sign in"
+  },
+  "signIn":{
+    "title":"Sign in to your account",
+    "paragraph":"Login to your account for a faster checkout.",
+    "label": {
+      "1":"Your Email",
+      "2":"Your Password"
+    },
+    "placeholder": {
+      "1":"Enter your Email",
+      "2":"Enter your Password"
+    },
+    "keep":"Keep me signed in",
+    "forgot":"Forgot Password?",
+    "signIn":"Sign in"
   }
 }
