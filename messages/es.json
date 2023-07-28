@@ -101,5 +101,43 @@
       "refund": "Política de reembolso",
       "support":"Ticket de soporte abierto",
       "tou": "Términos de uso"
+    },
+    "signUp": {
+      "title": "Cree su cuenta",
+      "paragraph": "Es totalmente gratis y súper fácil",
+      "label": {
+        "1":"Nombre completo",
+        "2":"Correo electrónico de trabajo",
+        "3":"Su contraseña"
+      },
+      "placeholder": {
+        "1":"Ingrese su nombre completo",
+        "2":"Ingrese su correo electrónico",
+        "3":"Ingrese su contraseña"
+      },
+      "agree": {
+        "1":"Al crear una cuenta significa que acepta las ",
+        "2":"Términos y condiciones ",
+        "3":", y nuestra ",
+        "4":"Política de privacidad"
+      },
+      "signUp": "Registrarse",
+      "p":"¿Ya usa ADM Graphics?",
+      "signIn":"Iniciar sesión"
+    },
+    "signIn":{
+      "title":"Iniciar sesión en su cuenta",
+      "paragraph":"Inicie sesión en su cuenta para un pago más rápido.",
+      "label": {
+        "1":"Su Correo electrónico",
+        "2":"Su contraseña"
+      },
+      "placeholder": {
+        "1":"Ingrese su correo electrónico",
+        "2":"Ingrese su contraseña"
+      },
+      "keep":"Mantenerme conectado",
+      "forgot":"¿Olvidó su contraseña?",
+      "signIn":"Iniciar sesión"
     }
   }
