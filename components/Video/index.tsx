@@ -5,21 +5,23 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 
 import ModalVideo from "react-modal-video";
+import {useTranslations} from 'next-intl';
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
 
+  const msg = useTranslations('video');
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="We are ready to help"
+          title={msg("title")}
           paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           center
           mb="80px"
         />
 
-        <div className="-mx-4 flex flex-wrap">
+        {/* <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
               className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
@@ -45,7 +47,7 @@ const Video = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <ModalVideo
@@ -58,7 +60,7 @@ const Video = () => {
       />
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1]">
-        <img src="/images/video/shape.svg" alt="shape" className="w-full" />
+        <Image src="/images/video/shape.svg" alt="shape" width={100} height={100} className="w-full" />
       </div>
     </section>
   );

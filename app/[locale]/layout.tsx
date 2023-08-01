@@ -3,11 +3,14 @@ import { ThemeProvider } from "next-themes";
 import {notFound} from 'next/navigation';
 import {createTranslator, NextIntlClientProvider} from 'next-intl';
 import {ReactNode} from 'react';
+import { usePathname } from "next/navigation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import "node_modules/react-modal-video/css/modal-video.css";
-import "../../styles/index.css";
+import clsx from 'clsx';
+
+// import "../../styles/index.css";
 
 type Props = {
   children: ReactNode;
@@ -23,7 +26,7 @@ async function getMessages(locale: string) {
 }
 
 export async function generateStaticParams() {
-  return ['en', 'de'].map((locale) => ({locale}));
+  return ['en', 'es', 'pt'].map((locale) => ({locale}));
 }
 
 // export async function generateMetadata({params: {locale}}: Props) {
@@ -35,29 +38,25 @@ export async function generateStaticParams() {
 //     title: 'Hello'
 //   };
 // }
-
 export default async function LocaleLayout({
   children,
   params: {locale}
 }: Props) {
  
   const messages = await getMessages(locale);
-
-  return (
-    <html lang={locale}>
-      <body className='flex h-full flex-col dark:bg-black'>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark"> 
-            <Header />
-            {children}
-            <Footer />
-            <ScrollToTop />
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+  //const pathname = usePathname();
+    return (
+      <html suppressHydrationWarning lang={locale}>
+        <body className={clsx('flex h-full flex-col dark:bg-black')}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light"> 
+              <Header />
+              {children}
+              <Footer />
+              <ScrollToTop />
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </body>
+      </html>
+    );
 }
-
-
-

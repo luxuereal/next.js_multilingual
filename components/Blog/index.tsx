@@ -1,13 +1,16 @@
+'use client'
 import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
 import blogData from "./blogData";
+import {useTranslations} from 'next-intl';
 
 const Blog = () => {
+  const msg = useTranslations('blog');
   return (
     <section id="blog" className="bg-primary/5 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Our Latest Blogs"
+          title={msg('title')}
           paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           center
         />

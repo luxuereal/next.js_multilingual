@@ -1,6 +1,42 @@
+'use client'
+import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { useState } from "react";
+import {toast} from 'react-toastify';
+import { useRouter } from "next/navigation";
 
 const SignupPage = () => {
+  const msg = useTranslations('signUp');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
+  const signUp = async () => {
+    if(name && email && password) {
+      try {
+        const body = { name, email, password };
+        const response = await fetch(`/api/signup`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "name": name,
+              "email": email,
+              "password":password
+            },
+            body: JSON.stringify({
+            }),
+        });
+        if (response) toast.success(response.headers.get('result'));
+        else toast.error("error");
+        //await router.push("/signin");
+      } catch (error) {
+        toast.error(error);
+      }
+    } else {
+      toast.error("All fields are required");
+      return;
+    }
+  }
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
@@ -9,12 +45,12 @@ const SignupPage = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[500px] rounded-md bg-primary bg-opacity-5 py-10 px-6 dark:bg-dark sm:p-[60px]">
                 <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
-                  Create your account
+                  {msg('title')}
                 </h3>
                 <p className="mb-11 text-center text-base font-medium text-body-color">
-                  It’s totally free and super easy
+                  {msg('paragraph')}
                 </p>
-                <button className="mb-6 flex w-full items-center justify-center rounded-md bg-white p-3 text-base font-medium text-body-color shadow-one hover:text-primary dark:bg-[#242B51] dark:text-body-color dark:shadow-signUp dark:hover:text-white">
+                {/* <button className="mb-6 flex w-full items-center justify-center rounded-md bg-white p-3 text-base font-medium text-body-color shadow-one hover:text-primary dark:bg-[#242B51] dark:text-body-color dark:shadow-signUp dark:hover:text-white">
                   <span className="mr-3">
                     <svg
                       width="20"
@@ -56,7 +92,7 @@ const SignupPage = () => {
                     Or, register with your email
                   </p>
                   <span className="hidden h-[1px] w-full max-w-[60px] bg-body-color sm:block"></span>
-                </div>
+                </div> */}
                 <form>
                   <div className="mb-8">
                     <label
@@ -64,13 +100,15 @@ const SignupPage = () => {
                       className="mb-3 block text-sm font-medium text-dark dark:text-white"
                     >
                       {" "}
-                      Full Name{" "}
+                      {msg('label.1')}{" "}
                     </label>
                     <input
                       type="text"
                       name="name"
-                      placeholder="Enter your full name"
+                      placeholder={msg('placeholder.1')}
                       className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      value={name}
+                      onChange={(e)=>setName(e.target.value)}
                     />
                   </div>
                   <div className="mb-8">
@@ -79,13 +117,15 @@ const SignupPage = () => {
                       className="mb-3 block text-sm font-medium text-dark dark:text-white"
                     >
                       {" "}
-                      Work Email{" "}
+                      {msg('label.2')}{" "}
                     </label>
                     <input
                       type="email"
                       name="email"
-                      placeholder="Enter your Email"
+                      placeholder={msg('placeholder.2')}
                       className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      value={email}
+                      onChange={(e)=>setEmail(e.target.value)}
                     />
                   </div>
                   <div className="mb-8">
@@ -94,13 +134,15 @@ const SignupPage = () => {
                       className="mb-3 block text-sm font-medium text-dark dark:text-white"
                     >
                       {" "}
-                      Your Password{" "}
+                      {msg('label.3')}{" "}
                     </label>
                     <input
                       type="password"
                       name="password"
-                      placeholder="Enter your Password"
+                      placeholder={msg('placeholder.3')}
                       className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      value={password}
+                      onChange={(e)=>setPassword(e.target.value)}
                     />
                   </div>
                   <div className="mb-8 flex">
@@ -134,29 +176,29 @@ const SignupPage = () => {
                         </div>
                       </div>
                       <span>
-                        By creating account means you agree to the
+                      {msg('agree.1')}
                         <a href="#0" className="text-primary hover:underline">
                           {" "}
-                          Terms and Conditions{" "}
+                          {msg('agree.2')}{" "}
                         </a>
-                        , and our
+                        {msg('agree.3')}
                         <a href="#0" className="text-primary hover:underline">
                           {" "}
-                          Privacy Policy{" "}
+                          {msg('agree.4')}{" "}
                         </a>
                       </span>
                     </label>
                   </div>
                   <div className="mb-6">
-                    <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                      Sign up
+                    <button type="submit" onClick={signUp} className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                    {msg('signUp')}
                     </button>
                   </div>
                 </form>
                 <p className="text-center text-base font-medium text-body-color">
-                  Already using Startup?
+                {msg('p')}
                   <Link href="/signin" className="text-primary hover:underline">
-                    Sign in
+                  {msg('signIn')}
                   </Link>
                 </p>
               </div>

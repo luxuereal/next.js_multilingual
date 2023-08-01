@@ -1,6 +1,8 @@
+'use client'
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import {useTranslations} from 'next-intl';
 
 const testimonialData: Testimonial[] = [
   {
@@ -33,11 +35,12 @@ const testimonialData: Testimonial[] = [
 ];
 
 const Testimonials = () => {
+  const msg = useTranslations('testimonial');
   return (
     <section className="relative z-10 bg-primary/[.03] py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
+          title={msg('title')}
           paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           center
         />
