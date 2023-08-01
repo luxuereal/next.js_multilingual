@@ -49,7 +49,7 @@ export default async function LocaleLayout({
       <html suppressHydrationWarning lang={locale}>
         <body className={clsx('flex h-full flex-col dark:bg-black')}>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark"> 
+            <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light"> 
               <Header />
               {children}
               <Footer />
@@ -60,6 +60,3 @@ export default async function LocaleLayout({
       </html>
     );
 }
-
-
-

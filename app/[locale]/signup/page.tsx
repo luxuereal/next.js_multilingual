@@ -1,9 +1,43 @@
 'use client'
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { useState } from "react";
+import {toast} from 'react-toastify';
+import { useRouter } from "next/navigation";
 
 const SignupPage = () => {
   const msg = useTranslations('signUp');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
+  const signUp = async () => {
+    if(name && email && password) {
+      try {
+        const body = { name, email, password };
+        const response = await fetch(`/api/signup`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "name": name,
+              "email": email,
+              "password":password
+            },
+            body: JSON.stringify({
+            }),
+        });
+        if (response) toast.success(response.headers.get('result'));
+        else toast.error("error");
+        //await router.push("/signin");
+      } catch (error) {
+        toast.error(error);
+      }
+    } else {
+      toast.error("All fields are required");
+      return;
+    }
+  }
+
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
@@ -74,6 +108,8 @@ const SignupPage = () => {
                       name="name"
                       placeholder={msg('placeholder.1')}
                       className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      value={name}
+                      onChange={(e)=>setName(e.target.value)}
                     />
                   </div>
                   <div className="mb-8">
@@ -89,6 +125,8 @@ const SignupPage = () => {
                       name="email"
                       placeholder={msg('placeholder.2')}
                       className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      value={email}
+                      onChange={(e)=>setEmail(e.target.value)}
                     />
                   </div>
                   <div className="mb-8">
@@ -104,6 +142,8 @@ const SignupPage = () => {
                       name="password"
                       placeholder={msg('placeholder.3')}
                       className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      value={password}
+                      onChange={(e)=>setPassword(e.target.value)}
                     />
                   </div>
                   <div className="mb-8 flex">
@@ -151,7 +191,7 @@ const SignupPage = () => {
                     </label>
                   </div>
                   <div className="mb-6">
-                    <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                    <button type="submit" onClick={signUp} className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
                     {msg('signUp')}
                     </button>
                   </div>
