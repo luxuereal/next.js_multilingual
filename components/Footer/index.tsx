@@ -141,7 +141,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href="/"
+                      href="/terms-and-conditions"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
@@ -150,7 +150,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/privacy-policy"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
@@ -159,11 +159,29 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/refund-policy"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
                       {msg('refund')}{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/disclaimer"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      {msg('disclaimer')}{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/copyright-policy"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      {msg('copyright')}{" "}
                     </a>
                   </li>
                 </ul>
@@ -196,7 +214,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/about"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
@@ -211,7 +229,7 @@ const Footer = () => {
         <div className="bg-primary/10 py-8">
           <div className="container">
             <p className="text-center text-base text-body-color dark:text-white">
-              Template by UIdeck and <a href="https://nextjstemplates.com" rel="nofollow noopener">Next.js Templates</a>
+            Copyright © ADM GRAPHICS All Rights Reserved.
             </p>
           </div>
         </div>
