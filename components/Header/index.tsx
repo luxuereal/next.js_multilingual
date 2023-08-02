@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import {useTranslations} from 'next-intl';
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
   // Navbar toggle
@@ -35,8 +36,14 @@ const Header = () => {
     }
   };
 
+  const router = useRouter();
+  const pathname = usePathname();
   const msg = useTranslations('header');
 
+  // const setLocale = (locale) => {
+  //   console.log(pathname);
+  //   router.push(locale + pathname);
+  // }
   return (
     <>
       <header
@@ -157,7 +164,7 @@ const Header = () => {
                           }`}
                             >
                           <Link
-                            href='/en'
+                            href='/en' 
                             className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
                           >
                             {msg('English')}
