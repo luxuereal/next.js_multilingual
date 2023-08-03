@@ -189,7 +189,7 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
-                  className="hidden rounded-md bg-primary py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
+                  className="hidden rounded-md  py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
                 >
                   {msg('Sign In')}
                 </Link>

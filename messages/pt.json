@@ -34,7 +34,7 @@
       "Plus": "Plus",
       "mo":"mês",
       "yr":"ano",
-      "ECONOMY":"ECONOMY ASSOCIAÇÃO",
+      "ECONOMY":"Associação econômica",
       "ENTREPRENEUR" : "EMPREENDEDOR MEMBERSHIP",
       "CORPORATE": "CORPORATE MEMBERSHIP",
       "buy now": "Compre agora",
@@ -70,8 +70,8 @@
       "title":"Nossos últimos blogs",
       "captions":{
         "1":"Desbloqueando o sucesso comercial com ADM Graphics",
-        "2":"Artigo Informativo: Tendências de Desenvolvimento Web para 2023",
-        "3":"Artigo Informativo: Tendências de Design para 2023"
+        "2":"Tendências de Desenvolvimento Web para 2023",
+        "3":"Tendências de Design para 2023"
       },
       "preparagraph": {
         "1":"ADM Graphics é uma empresa versátil e inovadora que oferece uma ampla gama de serviços...",

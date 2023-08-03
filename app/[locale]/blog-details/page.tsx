@@ -126,12 +126,16 @@ const BlogDetailsPage = () => {
                 <div>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      <Image
-                        src={`/images/blog/blog-details-0${data?.id}.jpg`}
-                        alt="image"
-                        fill
-                        className="object-cover object-center"
-                      />
+                      {data ? (
+                        <Image
+                          src={`/images/blog/blog-details-0${data?.id}.jpg`}
+                          alt="image"
+                          fill
+                          className="object-cover object-center"
+                        />
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </div>
                   {minititles.map((title, index) => {
@@ -146,7 +150,7 @@ const BlogDetailsPage = () => {
                       </div>
                     );
                   })}
-                  
+
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -219,7 +223,7 @@ const BlogDetailsPage = () => {
                           cx="37.5"
                           cy="37.5"
                           r="37.5"
-                          fill="#4A6CF7"
+                          fill="#6A1EB2"
                         />
                         <mask
                           id="mask0_111:596"
@@ -235,7 +239,7 @@ const BlogDetailsPage = () => {
                             cx="37.5"
                             cy="37.5"
                             r="37.5"
-                            fill="#4A6CF7"
+                            fill="#6A1EB2"
                           />
                         </mask>
                         <g mask="url(#mask0_111:596)">
