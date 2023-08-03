@@ -1,16 +1,24 @@
+
 import { Blog } from "@/types/blog";
 import Image from "next/image";
 import Link from "next/link";
+import Cookies from 'js-cookie';
 
-const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph, author, tags, publishDate } = blog;
+const SingleBlog = ({ blog, blogTitle, preText, index}: { blog: Blog, blogTitle: String, preText: String, index:Number}) => {
+  const { image, author, tags, publishDate } = blog;
+  const title = blogTitle;
+  const paragraph = preText;
+  const id = index;
+  const selectBlog = () => {
+    Cookies.set("id", id, { expires: 7 });
+  }
   return (
     <>
       <div
         className="wow fadeInUp relative overflow-hidden rounded-md bg-white shadow-one dark:bg-dark"
         data-wow-delay=".1s"
       >
-        <Link href="/" className="relative block h-[220px] w-full">
+        <Link href="/blog-details" onClick={selectBlog} className="relative block h-[220px] w-full">
           <span className="absolute top-6 right-6 z-20 inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold capitalize text-white">
             {tags[0]}
           </span>
@@ -19,7 +27,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
         <div className="p-6 sm:p-8 md:py-8 md:px-6 lg:p-8 xl:py-8 xl:px-5 2xl:p-8">
           <h3>
             <Link
-              href="/"
+              href="/blog-details" onClick={selectBlog}
               className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
             >
               {title}

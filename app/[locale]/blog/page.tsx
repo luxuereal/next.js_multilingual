@@ -1,8 +1,11 @@
+'use client'
 import SingleBlog from "@/components/Blog/SingleBlog";
 import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import {useTranslations} from 'next-intl';
 
 const Blog = () => {
+  const msg = useTranslations('blog');
   return (
     <>
       <Breadcrumb
@@ -13,14 +16,15 @@ const Blog = () => {
       <section className="pt-[120px] pb-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
-              <div
-                key={blog.id}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
-              >
-                <SingleBlog blog={blog} />
-              </div>
-            ))}
+            <div key={1} className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3">
+                <SingleBlog blog={blogData[0]} blogTitle={msg('captions.1')} preText={msg('preparagraph.1')} index={1}/>
+            </div>
+            <div key={2} className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3">
+                <SingleBlog blog={blogData[1]} blogTitle={msg('captions.2')} preText={msg('preparagraph.2')} index={2}/>
+            </div>
+            <div key={3} className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3">
+                <SingleBlog blog={blogData[2]} blogTitle={msg('captions.3')} preText={msg('preparagraph.3')} index={3}/>
+            </div>
           </div>
 
           <div

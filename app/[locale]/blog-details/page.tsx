@@ -1,8 +1,38 @@
+"use client";
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
+import blogData from "@/components/Blog/blogData";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
+import { useTranslations } from "next-intl";
+import { Blog } from "@/types/blog";
 
 const BlogDetailsPage = () => {
+  const msg = useTranslations("blog");
+  const [title, setTitle] = useState("");
+  const [data, setData] = useState<Blog>();
+  const [minititles, setMiniTitles] = useState([]);
+  const [paragraphs, setParagraphs] = useState([]);
+
+  useEffect(() => {
+    const index = Cookies.get("id");
+    setData(blogData[parseInt(index) - 1]);
+    if (index === "1") {
+      setTitle(msg("captions.1"));
+      setMiniTitles(msg("contents.1.title").split("//"));
+      setParagraphs(msg("contents.1.paragraph").split("//"));
+    } else if (index === "2") {
+      setTitle(msg("captions.2"));
+      setMiniTitles(msg("contents.2.title").split("//"));
+      setParagraphs(msg("contents.2.paragraph").split("//"));
+    } else {
+      setTitle(msg("captions.3"));
+      setMiniTitles(msg("contents.3.title").split("//"));
+      setParagraphs(msg("contents.3.paragraph").split("//"));
+    }
+  }, [msg, data]);
+
   return (
     <>
       <section className="pt-[150px] pb-[120px]">
@@ -11,25 +41,23 @@ const BlogDetailsPage = () => {
             <div className="w-full px-4 lg:w-8/12">
               <div>
                 <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  10 amazing sites to download stock photos & digital assets for
-                  free
+                  {title}
                 </h2>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
                     <div className="mr-10 mb-5 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                          <Image
-                            src="/images/blog/author-02.png"
-                            alt="author"
-                            fill
-                          />
+                          {data?.author.image ? (
+                            <Image src={data?.author.image} alt="author" fill />
+                          ) : (
+                            ""
+                          )}
                         </div>
                       </div>
                       <div className="w-full">
                         <h4 className="mb-1 text-base font-medium text-body-color">
-                          By
-                          <span>Musharof Chy</span>
+                          By <span>{data?.author.name}</span>
                         </h4>
                       </div>
                     </div>
@@ -53,7 +81,7 @@ const BlogDetailsPage = () => {
                             <path d="M13.2637 3.3697H7.64754V2.58105C8.19721 2.43765 8.62738 1.91189 8.62738 1.31442C8.62738 0.597464 8.02992 0 7.28906 0C6.54821 0 5.95074 0.597464 5.95074 1.31442C5.95074 1.91189 6.35702 2.41376 6.93058 2.58105V3.3697H1.31442C0.597464 3.3697 0 3.96716 0 4.68412V13.2637C0 13.9807 0.597464 14.5781 1.31442 14.5781H13.2637C13.9807 14.5781 14.5781 13.9807 14.5781 13.2637V4.68412C14.5781 3.96716 13.9807 3.3697 13.2637 3.3697ZM6.6677 1.31442C6.6677 0.979841 6.93058 0.716957 7.28906 0.716957C7.62364 0.716957 7.91042 0.979841 7.91042 1.31442C7.91042 1.649 7.64754 1.91189 7.28906 1.91189C6.95448 1.91189 6.6677 1.6251 6.6677 1.31442ZM1.31442 4.08665H13.2637C13.5983 4.08665 13.8612 4.34954 13.8612 4.68412V6.45261H0.716957V4.68412C0.716957 4.34954 0.979841 4.08665 1.31442 4.08665ZM13.2637 13.8612H1.31442C0.979841 13.8612 0.716957 13.5983 0.716957 13.2637V7.16957H13.8612V13.2637C13.8612 13.5983 13.5983 13.8612 13.2637 13.8612Z" />
                           </svg>
                         </span>
-                        12 Jan 2024
+                        {data?.publishDate}
                       </p>
                       <p className="mr-5 flex items-center text-base font-medium text-body-color">
                         <span className="mr-3">
@@ -91,69 +119,34 @@ const BlogDetailsPage = () => {
                       href="#0"
                       className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
                     >
-                      Design
+                      {data?.tags[0]}
                     </a>
                   </div>
                 </div>
                 <div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat.
-                  </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                       <Image
-                        src="/images/blog/blog-details-02.jpg"
+                        src={`/images/blog/blog-details-0${data?.id}.jpg`}
                         alt="image"
                         fill
                         className="object-cover object-center"
                       />
                     </div>
                   </div>
-                  <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Quis enim lobortis scelerisque fermentum. Neque
-                    sodales ut etiam sit amet. Ligula ullamcorper
-                    <strong className="text-primary dark:text-white">
-                      malesuada
-                    </strong>
-                    proin libero nunc consequat interdum varius. Quam
-                    pellentesque nec nam aliquam sem et tortor consequat.
-                    Pellentesque adipiscing commodo elit at imperdiet.
-                  </p>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Semper auctor neque vitae tempus quam pellentesque nec.
-                    <span className="text-primary underline dark:text-white">
-                      Amet dictum sit amet justo
-                    </span>
-                    donec enim diam. Varius sit amet mattis vulputate enim nulla
-                    aliquet porttitor. Odio pellentesque diam volutpat commodo
-                    sed.
-                  </p>
-                  <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-                    Digital marketplace for Ui/Ux designers.
-                  </h3>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    consectetur adipiscing elit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    mattis vulputate cupidatat.
-                  </p>
-                  <ul className="mb-10 list-inside list-disc text-body-color">
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Consectetur adipiscing elit in voluptate velit.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Mattis vulputate cupidatat.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Vulputate enim nulla aliquet porttitor odio pellentesque
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Ligula ullamcorper malesuada proin
-                    </li>
-                  </ul>
+                  {minititles.map((title, index) => {
+                    return (
+                      <div key={index}>
+                        <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                          {title}
+                        </h3>
+                        <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                          {paragraphs[index]}
+                        </p>
+                      </div>
+                    );
+                  })}
+                  
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -302,11 +295,6 @@ const BlogDetailsPage = () => {
                       </svg>
                     </span>
                   </div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    consectetur adipiscing elit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    mattis vulputate cupidatat.
-                  </p>
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h5 className="mb-3 text-sm font-medium text-body-color">
