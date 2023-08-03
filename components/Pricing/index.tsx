@@ -90,7 +90,6 @@ const Pricing = () => {
             <OfferList text={msg('BasicServices.6')}status="active" />
             <OfferList text={msg('BasicServices.7')}status="active" />
             <OfferList text={msg('BasicServices.8')}status="active" />
-            <OfferList text={msg('BasicServices.9')}status="active" />
           </PricingBox>
           <PricingBox
             packageName={msg('Plus')}
@@ -106,7 +105,6 @@ const Pricing = () => {
             <OfferList text={msg('PlusServices.6')} status="active" />
             <OfferList text={msg('PlusServices.7')} status="active" />
             <OfferList text={msg('PlusServices.8')} status="active" />
-            <OfferList text={msg('PlusServices.9')} status="active" />
           </PricingBox>
         </div>
       </div>

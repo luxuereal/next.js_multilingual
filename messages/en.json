@@ -12,7 +12,7 @@
     "Portuguese": "Portuguese"
   },
   "hero": {
-    "title": "Digital solutions LOW COST for your business",
+    "title": "LOW COST digital solutions for your business",
     "Begin": "Begin",
     "Contact": "Contact US"
   },
@@ -43,7 +43,7 @@
       "2":"Hosting economy in the United States",
       "3":"Unlimited email accounts",
       "4":"Customer service via email",
-      "5":"Advertise on 1 Instagram story per week"
+      "5":"SSL certificate"
     },
     "BasicServices": {
       "1":"Ready-to-use payment platforms (PayPal, Stripe, and more)",
@@ -53,8 +53,7 @@
       "5":"Unlimited premium email accounts",
       "6":"SSL certificate",
       "7":"Comprehensive service management",
-      "8":"Customer service 24/7/365 (via email and telegram)",
-      "9":"Advertise on 3 Instagram stories per week"
+      "8":"Customer service 24/7/365 (via email and telegram)"
     }
     ,"PlusServices": {
       "1":"Ready-to-use payment platforms (PayPal, Stripe, and more)",
@@ -64,12 +63,35 @@
       "5":"Unlimited corporate email accounts",
       "6":"SSL certificate",
       "7":"Comprehensive service management",
-      "8":"Customer service 24/7/365 (via email and telegram)",
-      "9":"Advertise on 3 Instagram stories per week"
+      "8":"Customer service 24/7/365 (via email and telegram)"
     }
   },
   "blog": {
-    "title":"Our Latest Blogs"
+    "title":"Our Latest Blogs",
+    "captions":{
+      "1":"Unlocking Business Success with ADM Graphics",
+      "2":"Informative Article: Web Development Trends for 2023",
+      "3":"Informative Article: Design Trends for 2023"
+    },
+    "preparagraph": {
+      "1":"ADM Graphics is a versatile and innovative company that offers a wide range of services...",
+      "2":"Web development is a dynamic field, with constant advancements in technology ...",
+      "3":"The world of design is ever-changing, with new trends emerging each year ..."
+    },
+    "contents": {
+      "1":{
+        "title":"Introduction//Graphic and Visual Design//Web Development//E-commerce Solutions//Hosting, Domain, and Email Services//Conclusion",
+        "paragraph":"ADM Graphics is a versatile and innovative company that offers a wide range of services to help businesses thrive in the digital landscape. From graphic and visual design to web development, e-commerce solutions, and hosting services, ADM Graphics is dedicated to empowering businesses with cutting-edge solutions. In this article, we will explore how each of these services contributes to unlocking business success.//First impressions matter, and ADM Graphics understands the importance of captivating visuals in today's competitive market. Their expert team of graphic designers creates eye-catching brand identities, logos, marketing materials, and stunning visuals that leave a lasting impact on customers. By aligning design elements with the brand's identity, ADM Graphics ensures that businesses stand out and attract their target audience.//ADM Graphics specializes in web development, crafting websites that not only look impressive but also function seamlessly. Their team of skilled developers ensures that each website is fully responsive, offering an optimal user experience across all devices. With a focus on user-centric design and efficient navigation, ADM Graphics empowers businesses to convert website visitors into loyal customers.//In today's digital era, having a robust e-commerce platform is vital for businesses to thrive. ADM Graphics provides tailored e-commerce solutions that enable businesses to showcase their products and services online effectively. From user-friendly interfaces to secure payment gateways, their e-commerce solutions are designed to enhance the online shopping experience and drive sales.//ADM Graphics goes beyond design and development by offering reliable hosting, domain registration, and email services. By providing secure and high-performance hosting solutions, businesses can enjoy a smooth online presence without worrying about downtime or slow loading times. Additionally, their domain registration and email services offer a professional touch to business communications.//ADM Graphics plays a pivotal role in helping businesses succeed in the digital realm. Their expertise in graphic and visual design, web development, e-commerce solutions, and hosting services enables businesses to thrive and leave a lasting impact on their target audience. By collaborating with ADM Graphics, businesses can unlock their full potential, establish a strong online presence, and achieve long-term success in today's competitive market."
+      },
+      "2":{
+        "title":"Introduction//AI and Machine Learning//Web Performance Optimization//Progressive Web Apps (PWAs)//Voice Search Optimization//Blockchain Integration//Conclusion",
+        "paragraph":"Web development is a dynamic field, with constant advancements in technology and programming languages. In 2023, developers are focused on creating seamless and efficient online experiences. Let's delve into the top web development trends that are driving the industry this year.//AI and Machine Learning are revolutionizing web development by offering personalized user experiences. From chatbots to content recommendations, these technologies enhance user engagement and satisfaction.//Web developers are prioritizing performance optimization to ensure faster loading times and smoother navigation. Techniques like code minification, lazy loading, and caching are employed to enhance website speed.//PWAs combine the best of web and mobile applications, offering an app-like experience directly through the browser. These apps can work offline and provide enhanced user engagement.//With the rising popularity of voice assistants, web developers are optimizing websites for voice search. Integrating voice-based interactions enhances user convenience and accessibility.//Blockchain technology is finding its way into web development, providing secure and transparent data storage and authentication. Developers are exploring the potential of blockchain for various web applications.//By staying updated with the latest design and web development trends, ADM Graphics can create visually stunning and technically efficient solutions for their clients. Embracing these trends will elevate their design and development capabilities, attracting more users and achieving business success."
+      },
+      "3":{
+        "title":"Introduction//Dark Mode//Microinteractions//Inclusive Design//Futuristic Interfaces",
+        "paragraph":"The world of design is ever-changing, with new trends emerging each year. In 2023, designers are exploring innovative ways to create captivating visuals and user experiences. In this article, we will explore the top design trends that are shaping the industry this year.//Dark Mode continues to be a popular design trend, offering a sleek and modern look to websites and applications. It reduces eye strain and enhances the readability of content, making it a hit among users.//Microinteractions are small animations or feedback that respond to user actions, adding a touch of interactivity and delight to the design. From subtle button animations to loading indicators, these details enhance the user experience.//Designers are increasingly prioritizing inclusive design, ensuring that websites and apps are accessible to all users, regardless of their abilities. This trend emphasizes creating user-friendly experiences for a diverse audience.//Designers are exploring futuristic interfaces that push boundaries and challenge traditional design norms. From abstract layouts to bold color schemes, these interfaces offer a unique and memorable experience."
+      }
+    }
   },
   "contact": {
     "title":"Need Help? Open a Ticket",
