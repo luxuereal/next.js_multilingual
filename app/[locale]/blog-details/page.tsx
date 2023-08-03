@@ -126,7 +126,7 @@ const BlogDetailsPage = () => {
                 <div>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      {data ? (
+                      {data?.id ? (
                         <Image
                           src={`/images/blog/blog-details-0${data?.id}.jpg`}
                           alt="image"
