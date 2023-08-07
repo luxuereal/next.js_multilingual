@@ -17,7 +17,8 @@
       "Contact": "Contate-nos"
     },
     "video": {
-      "title": "Nós estamos prontos para ajudar"
+      "title": "Nós estamos prontos para ajudar",
+      "paragraph": "Comunicação rápida com o cliente para finalizar o projeto em tempo recorde"
     },
     "section": {
       "title": "Oferecemos o melhor serviço. Sempre.",
@@ -68,6 +69,7 @@
     },
     "blog": {
       "title":"Nossos últimos blogs",
+      "paragraph":"Artigos informativos escritos por nossos especialistas com as últimas tendências",
       "captions":{
         "1":"Desbloqueando o sucesso comercial com ADM Graphics",
         "2":"Tendências de Desenvolvimento Web para 2023",
@@ -109,7 +111,8 @@
         }
     },
     "testimonial": {
-      "title":"O que nossos usuários dizem"
+      "title":"O que nossos usuários dizem",
+      "paragraph":"Os clientes são o nosso bem mais precioso e o principal motor da nossa empresa."
     },
     "footer": {
       "useful":"Links Úteis",
