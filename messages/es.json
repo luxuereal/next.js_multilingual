@@ -17,7 +17,8 @@
     "Contact": "Contáctenos"
   },
   "video": {
-    "title": "Estamos listos para ayudar"
+    "title": "Estamos listos para comenzar",
+    "paragraph":"Rápida comunicación con el cliente para tener el proyecto terminado en tiempo record"
   },
   "section": {
     "title": "Ofrecemos el mejor servicio. Siempre.",
@@ -40,16 +41,16 @@
     "buy now": "Compra ahora",
     "LiteServices": {
       "1": "Registro de 1 dominio .com",
-      "2": "Hosting economía en Estados Unidos",
+      "2": "Hosting económico en Estados Unidos",
       "3": "Cuentas de correo ilimitadas",
       "4": "Atención al cliente por correo electrónico",
       "5": "Certificado SSL"
     },
     "BasicServices": {
       "1": "Plataformas de pago listas para usar (PayPal, Stripe y más)",
-      "2": "Textos legales para comercio electrónico (Pri política de vacantes, cookies, términos y condiciones, reembolsos, devoluciones)",
+      "2": "Textos legales para comercio electrónico (Política de privacidad, cookies, términos y condiciones, reembolsos, devoluciones)",
       "3": "Registro de 1 dominio .com",
-      "4": "Alojamiento premium en Estados Unidos",
+      "4": "Hosting económico en Estados Unidos",
       "5": "Cuentas de correo premium ilimitadas",
       "6": "Certificado SSL",
       "7": "Gestión integral de servicios",
@@ -68,8 +69,9 @@
   },
   "blog": {
     "title":"Nuestros últimos blogs",
+    "paragraph":"Articulos informativos redactados por nuestros expertos con las últimas tendencias",
     "captions":{
-      "1":"Desbloqueo del éxito empresarial con gráficos ADM",
+      "1":"Desbloqueo del éxito empresarial con ADM Graphics",
       "2":"Tendencias de Desarrollo Web para 2023",
       "3":"Tendencias de Diseño para 2023"
     },
@@ -94,7 +96,7 @@
     }
   },
   "contact": {
-    "title": "¿Necesitas ayuda? Abra un ticket",
+    "title": "¿Necesita ayuda? Abra un ticket de soporte",
     "paragraph": "Nuestro equipo de soporte se comunicará con usted lo antes posible por correo electrónico.",
     "submit": "Enviar boleto",
     "caption": {
@@ -109,7 +111,8 @@
     }
   },
   "testimonial": {
-    "title": "Lo que dicen nuestros usuarios"
+    "title": "Nuestros clientes, nuestra prioridad",
+    "paragraph":"Los clientes son nuestro activo mas preciado y el principal motor de nuestra empresa."
   },
   "footer": {
     "useful": "Enlaces útiles",

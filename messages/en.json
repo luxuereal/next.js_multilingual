@@ -17,7 +17,8 @@
     "Contact": "Contact US"
   },
   "video": {
-    "title": "We are ready to help"
+    "title": "We are ready to help",
+    "paragraph": "Quick communication with the client to have the project finished in record time"
   },
   "section": {
     "title": "We offer the best service. Always.",
@@ -68,6 +69,7 @@
   },
   "blog": {
     "title":"Our Latest Blogs",
+    "paragraph":"Informative articles written by our experts with the latest trends",
     "captions":{
       "1":"Unlocking Business Success with ADM Graphics",
       "2":"Web Development Trends for 2023",
@@ -109,7 +111,8 @@
     }
   },
   "testimonial": {
-    "title":"What Our Users Says"
+    "title":"What Our Users Says",
+    "paragraph":"Customers are our most precious asset and the main engine of our company."
   },
   "footer": {
     "useful":"Useful Links",
