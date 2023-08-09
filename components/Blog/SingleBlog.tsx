@@ -18,7 +18,7 @@ const SingleBlog = ({ blog, blogTitle, preText, index}: { blog: Blog, blogTitle:
         className="wow fadeInUp relative overflow-hidden rounded-md bg-white shadow-one dark:bg-dark"
         data-wow-delay=".1s"
       >
-        <Link href="/blog-details" onClick={selectBlog} className="relative block h-[220px] w-full">
+        <Link href="/blog-details" onClick={selectBlog} className="relative block h-[220px] w-full" scroll={false}>
           <span className="absolute top-6 right-6 z-20 inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold capitalize text-white">
             {tags[0]}
           </span>
@@ -29,6 +29,7 @@ const SingleBlog = ({ blog, blogTitle, preText, index}: { blog: Blog, blogTitle:
             <Link
               href="/blog-details" onClick={selectBlog}
               className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
+              scroll={false}
             >
               {title}
             </Link>

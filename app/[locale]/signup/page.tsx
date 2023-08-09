@@ -197,7 +197,7 @@ const SignupPage = () => {
                 </form>
                 <p className="text-center text-base font-medium text-body-color">
                 {msg('p')}
-                  <Link href="/signin" className="text-primary hover:underline">
+                  <Link href="/signin" className="text-primary hover:underline" scroll={false}>
                   {msg('signIn')}
                   </Link>
                 </p>

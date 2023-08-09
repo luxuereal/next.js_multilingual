@@ -61,6 +61,7 @@ const Header = () => {
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
+                scroll={false}
               >
                 <Image
                   src="/images/logo/logo-2.png"
@@ -166,18 +167,21 @@ const Header = () => {
                           <Link
                             href='/en' 
                             className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+                            scroll={false}
                           >
                             {msg('English')}
                           </Link>
                           <Link
                             href='/es'
                             className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+                            scroll={false}
                           >
                             {msg('Spanish')}
                           </Link>
                           <Link
                             href='/pt'
                             className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+                            scroll={false}
                           >
                             {msg('Portuguese')}
                           </Link>
@@ -190,6 +194,7 @@ const Header = () => {
                 <Link
                   href="/signin"
                   className="hidden rounded-md  py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
+                  scroll={false}
                 >
                   {msg('Sign In')}
                 </Link>

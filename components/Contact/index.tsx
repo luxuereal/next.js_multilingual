@@ -1,9 +1,12 @@
 'use client'
+import Link from "next/link";
 import NewsLatterBox from "./NewsLatterBox";
 import {useTranslations} from 'next-intl';
+import { usePathname } from "next/navigation";
 
 const Contact = () => {
   const msg = useTranslations('contact');
+  const filename = usePathname().substring(1);
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -18,8 +21,12 @@ const Contact = () => {
                 {msg('title')}
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                {msg('paragraph')}
+                {msg('paragraph')}{" "}
+                <Link download href={`/brochure/${filename.length === 0 ? "en" : filename}.pdf`} className="underline" scroll={false} locale={false}>
+                  {msg('download')}
+                </Link>
               </p>
+              
               <form>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">

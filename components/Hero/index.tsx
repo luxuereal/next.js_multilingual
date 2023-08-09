@@ -6,6 +6,18 @@ const Hero = () => {
 
   const msg = useTranslations('hero');
 
+   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // first prevent the default behavior
+    e.preventDefault();
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <section
@@ -27,14 +39,16 @@ const Hero = () => {
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href="#"
+                    href="#pricing"
                     className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    onClick={handleScroll}
                   >
                    🔥 {msg('Begin')}
                   </Link>
                   <Link
-                    href="#"
+                    href="#contact"
                     className="rounded-md bg-black/20 py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
+                    onClick={handleScroll}
                   >
                     {msg('Contact')}
                   </Link>
