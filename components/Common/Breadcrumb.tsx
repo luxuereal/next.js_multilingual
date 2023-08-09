@@ -28,6 +28,7 @@ const Breadcrumb = ({
                     <Link
                       href="/"
                       className="pr-1 text-base font-medium text-body-color hover:text-primary"
+                      scroll={false}
                     >
                       Home
                     </Link>

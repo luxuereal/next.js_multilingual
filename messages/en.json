@@ -108,7 +108,8 @@
       "1":"Enter your name",
       "2":"Enter your email",
       "3":"Enter your Message"
-    }
+    },
+    "download":"Download our brochure here..."
   },
   "testimonial": {
     "title":"What Our Users Says",

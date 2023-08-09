@@ -108,7 +108,8 @@
           "1":"Digite seu nome",
           "2":"Digite seu e-mail",
           "3":"Digite sua mensagem"
-        }
+        },
+        "download":"Baixe nosso folheto de informação geral aqui..."
     },
     "testimonial": {
       "title":"O que nossos usuários dizem",

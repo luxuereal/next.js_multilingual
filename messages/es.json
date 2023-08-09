@@ -108,7 +108,8 @@
       "1": "Ingrese su nombre",
       "2": "Ingrese su correo electrónico",
       "3": "Ingrese su mensaje"
-    }
+    },
+    "download":"Descargue nuestro brochure aquí..."
   },
   "testimonial": {
     "title": "Nuestros clientes, nuestra prioridad",
