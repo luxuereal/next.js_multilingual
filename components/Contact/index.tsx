@@ -22,7 +22,7 @@ const Contact = () => {
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
                 {msg('paragraph')}{" "}
-                <Link download href={`/brochure/${filename.length === 0 ? "en" : filename}.pdf`} className="underline" scroll={false} locale={false}>
+                <Link download href={`/files/${filename.length === 0 ? "en" : filename}.pdf`} className="underline" scroll={false} locale={false}>
                   {msg('download')}
                 </Link>
               </p>
