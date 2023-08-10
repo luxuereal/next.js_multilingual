@@ -5,6 +5,18 @@ import { useTranslations } from "next-intl";
 
 const Footer = () => {
   const msg = useTranslations("footer");
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // first prevent the default behavior
+    e.preventDefault();
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <footer
@@ -101,8 +113,9 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href="/"
+                      href="#blog"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      onClick={handleScroll}
                     >
                       {" "}
                       {msg("blog")}{" "}
@@ -110,8 +123,9 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#pricing"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      onClick={handleScroll}
                     >
                       {" "}
                       {msg("pricing")}{" "}
@@ -119,8 +133,9 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#about"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      onClick={handleScroll}
                     >
                       {" "}
                       {msg("about")}{" "}
@@ -193,23 +208,15 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href="/"
+                      href="#contact"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      onClick={handleScroll}
                     >
                       {" "}
                       {msg("support")}{" "}
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
-                    >
-                      {" "}
-                      {msg("tou")}{" "}
-                    </a>
-                  </li>
-                  <li>
+                  {/* <li>
                     <a
                       href="/about"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
@@ -217,7 +224,7 @@ const Footer = () => {
                       {" "}
                       {msg("about")}{" "}
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
