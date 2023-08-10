@@ -1,54 +1,82 @@
-'use client'
+"use client";
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 
-const testimonialData: Testimonial[] = [
-  {
-    id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
-  },
-  {
-    id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
-  },
-  {
-    id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
-    star: 5,
-  },
-];
+// const testimonialData: Testimonial[] = [
+//   {
+//     id: 1,
+//     name: "John Smith",
+//     designation: "",
+//     content:
+//       "I couldn't be happier with ADM Graphics' services. They designed a stunning logo for my business and helped me create a user-friendly website. The team was attentive and professional throughout the process. I highly recommend ADM Graphics for anyone looking for creative and top-quality solutions.",
+//     image: "/images/testimonials/auth-01.png",
+//     star: 5,
+//   },
+//   {
+//     id: 2,
+//     name: "Devid Weilium",
+//     designation: "",
+//     content:
+//       "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+//     image: "/images/testimonials/auth-02.png",
+//     star: 5,
+//   },
+//   {
+//     id: 3,
+//     name: "Lethium Frenci",
+//     designation: "",
+//     content:
+//       "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+//     image: "/images/testimonials/auth-03.png",
+//     star: 5,
+//   },
+// ];
 
 const Testimonials = () => {
-  const msg = useTranslations('testimonial');
+  const msg = useTranslations("testimonial");
+  const reviews = useTranslations("reviews");
   return (
     <section className="relative z-10 bg-primary/[.03] py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title={msg('title')}
-          paragraph={msg('paragraph')}
+          title={msg("title")}
+          paragraph={msg("paragraph")}
           center
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
-          ))}
+          <SingleTestimonial
+            testimonial={{
+              id: 1,
+              name: "John Smith",
+              designation: "",
+              content: reviews("1"),
+              image: "/images/testimonials/auth-01.png",
+              star: 5,
+            }}
+          />
+          <SingleTestimonial
+            testimonial={{
+              id: 2,
+              name: "Emily Johnson",
+              designation: "",
+              content: reviews("2"),
+              image: "/images/testimonials/auth-02.png",
+              star: 5,
+            }}
+          />
+          <SingleTestimonial
+            testimonial={{
+              id: 3,
+              name: "Michael Williams",
+              designation: "",
+              content: reviews("3"),
+              image: "/images/testimonials/auth-03.png",
+              star: 5,
+            }}
+          />
         </div>
       </div>
       <div className="absolute top-5 right-0 z-[-1]">
