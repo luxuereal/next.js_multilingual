@@ -32,7 +32,6 @@ const BlogDetailsPage = () => {
       setParagraphs(msg("contents.3.paragraph").split("//"));
     }
   }, [msg, data]);
-
   return (
     <>
       <section className="pt-[150px] pb-[120px]">
