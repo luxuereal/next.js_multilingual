@@ -97,7 +97,7 @@ const BlogSidebarPage = () => {
                     </a>
                   </div>
                 </div>
-                <div>
+                {/* <div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
@@ -331,7 +331,7 @@ const BlogSidebarPage = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="w-full px-4 lg:w-4/12">
